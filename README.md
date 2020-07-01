@@ -31,14 +31,14 @@ url : http://localhost:8080/deleteUser
 }
 ```
 
-* добавление пользователей во встречу
+* добавление пользователя во встречу
 
 url : http://localhost:8080/addUsers
 
 пример: json body
 ```
 {
-    "logins": ["Login1", "Login2"],
+    "login": "Login1",
     "name" : "Meet1"
 }
 ```
