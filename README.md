@@ -17,7 +17,8 @@ url : http://localhost:8080/createMeet
 {
     "name": "name",
     "startDate": "2020-07-03T10:15:30",
-    "logins": ["login1", "login2"]
+    "logins": ["login1", "login2"],
+    "creatorLogin" : "Login5"
 }
 ```
 * удаление встречи
