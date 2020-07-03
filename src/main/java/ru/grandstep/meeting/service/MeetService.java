@@ -76,11 +76,14 @@ public class MeetService {
                 "Dear " + user.getLogin() + ", you are invited to " + meet.getName() + " at "
                         + meet.getStartDateTime().toString() + ".");
 
-        userInMeetRepository.save(userInMeet);
 
-        return crossingCheck(user, meet.getStartDateTime(), meet.getDurationMinutes())
+        String result = crossingCheck(user, meet.getStartDateTime(), meet.getDurationMinutes())
                 ? "User: " + user.getLogin() + " intersects meetings"
                 : null;
+
+        userInMeetRepository.save(userInMeet);
+
+        return result;
     }
 
     public List<String> save(Meet meet, List<String> userLogins, String creatorLogin) throws MessagingException {

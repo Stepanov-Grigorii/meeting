@@ -28,7 +28,7 @@ class DeleteMeetTests {
     @BeforeEach
     void setUp() {
         meetRepository.deleteAll();
-        meet = meetRepository.save(new Meet("Meet1", LocalDateTime.now().plusSeconds(3), 60));
+        meet = meetRepository.save(new Meet("Meet1", LocalDateTime.now().plusDays(3), 60));
     }
 
     @Test
